@@ -13,3 +13,9 @@ for i in range(n):
         T.append(float(t))
     else:
         T.append(float(t))
+
+print(n)
+print(errors)
+print(ol)
+print(f'{max(T):.1f}')
+print(f'{sum(T)/(n-errors):.1f}')
