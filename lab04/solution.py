@@ -9,3 +9,9 @@ def winner(names: list, scores: list) -> str:
 			maxsc = scores[i]
 			maxnm = names[i]
 	return maxnm
+
+def average(scores: list) -> float:
+	if scores == []: 
+		return 0.0
+	else:
+		return round(0+sum(scores)/len(scores),2)
