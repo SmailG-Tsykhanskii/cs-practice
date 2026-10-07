@@ -14,12 +14,20 @@ def average(scores: list) -> float:
 	if scores == []: 
 		return 0.0
 	else:
-		return round(0+sum(scores)/len(scores),2)
+		return round(0 + sum(scores) / len(scores), 2)
 
 def ranking(names: list, scores: list) -> list:
 	for i in range(len(names)):
-		for j in range(i,len(names)):
-			if scores[i]<scores[j]:
-				(scores[i],scores[j]) = (scores[j],scores[i])
-				(names[i],names[j]) = (names[j],names[i])
+		for j in range(i, len(names)):
+			if scores[i] < scores[j]:
+				(scores[i], scores[j]) = (scores[j], scores[i])
+				(names[i], names[j]) = (names[j], names[i])
 	return names
+	
+def above_average(names: list, scores: list) -> list:
+	av = average(scores)
+	abav = []
+	for i in range(len(names)):
+		if scores[i] > av:
+			abav.append(names[i])
+	return abav
