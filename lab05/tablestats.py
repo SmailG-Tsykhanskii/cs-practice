@@ -11,6 +11,10 @@ def read_rows(lines):
 			A = list(map(str,i.split(',')))
 			row=[]
 			for j in range(len(names)):
-					row.append((names[j],A[j]))
-			rows.append(dict(row))
+					rows.append({names[j],A[j]})
 	return rows
+
+print(['a,b','1,2'])
+def count_types(rows):
+	pass
+	
