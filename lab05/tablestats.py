@@ -21,3 +21,5 @@ def count_types(rows):
                 types[i['тип']] += 1
         return types
 
+def total_minutes(rows,kind):
+        return round(sum(float(x['минуты']) for x in rows if x['тип'] == kind),1) 
