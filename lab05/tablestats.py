@@ -22,4 +22,11 @@ def count_types(rows):
         return types
 
 def total_minutes(rows,kind):
-        return round(sum(float(x['минуты']) for x in rows if x['тип'] == kind),1) 
+        return round(0.0+sum(float(x['минуты']) for x in rows if x['тип'] == kind),1) 
+
+def to_csv(counts):
+        summary = 'тип,количество\n'
+        for i in counts.items():
+                summary += f'{i[0]},{i[1]}\n'
+        return summary
+	
