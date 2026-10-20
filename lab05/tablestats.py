@@ -5,10 +5,10 @@ def read_rows(lines):
 	for i in lines:
 		if First:
 			for j in map(str,i.split(',')):
-				names.append(j)
+				names.append(j.replace('\n', ''))
 			First = False
 		elif len(i.split(','))==len(names):
-			A = list(map(str,i.split(',')))
+			A = list(x.replace('\n', '') for x in map(str,i.split(',')))
 			row=[]
 			for j in range(len(names)):
 					row.append((names[j],A[j]))
@@ -26,7 +26,7 @@ def total_minutes(rows,kind):
 
 def to_csv(counts):
         summary = 'тип,количество\n'
-        for i in counts.items():
+        for i in sorted(counts.items()):
                 summary += f'{i[0]},{i[1]}\n'
-        return summary
+        return (summary)
 	
