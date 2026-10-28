@@ -17,6 +17,6 @@ def column_means(matrix):
 	
 def column_range(matrix,column):
 	if matrix!=[]:
-		return (np.amax(np.asarray(matrix),axis=0)-np.amin(np.asarray(matrix),axis=0))[column].real()
+		return float((np.amax(np.asarray(matrix),axis=0)-np.amin(np.asarray(matrix),axis=0))[column])
 	else:
 		return 0.0
