@@ -8,8 +8,8 @@ def vector_report(values):
 
 def change_vector(values):
 	a = np.asarray(values).copy()
-	a[1:4] = 99
-	a[5::2] = -1
+	a[2:4] = 99
+	a[::2] = -1
 	return a.tolist()
 
 def cap_above(values, limit):
